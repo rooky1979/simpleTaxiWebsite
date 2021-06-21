@@ -1,0 +1,43 @@
+<!--Matthew Rook ID: 18007407
+	booking.html for client side GUI and for entering information to book a taxi-->
+<html XMLns="http://www.w3.org/1999/xHTML">
+
+<head>
+	<title>Assignment 2 Taxi Booking System - Booking Component</title>
+	<script type="text/javascript" src="xhr.js"></script>
+	<script type="text/javascript" src="booking.js"></script>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<!--invoke the JS get date and time function upon loading-->
+
+<body onload="getDateTime()">
+
+	<h1>CabsOnline - Booking Form</h1>
+
+	<h2>Please enter your contact details:</h2>
+
+	<!--form to enter the customer details-->
+	<form>
+		<label>Customer Name <strong>(required):</strong> <input type="text" name="cname" required> <br> </label>
+		<label><br>Phone No <strong>(required):</strong> <input type="text" name="phone" required> <br><br> </label>
+		<label>Unit No: <input type="text" name="unumber"> <br><br> </label>
+		<label>Street No <strong>(required):</strong> <input type="text" name="snumber" required> <br><br> </label>
+		<label>Street Name <strong>(required):</strong> <input type="text" name="stname" required> <br><br> </label>
+		<label>Suburb: <input type="text" name="sbname"> <br><br> </label>
+		<label>Destination Suburb: <input type="text" name="dsbname"> <br><br> </label>
+		<label>Pick-up Date <strong>(required):</strong> <input type="text" id="date" name="date" required> <br><br>
+		</label>
+		<label>Pick-up Time <strong>(required):</strong> <input type="text" id="time" name="time" required> <br><br>
+		</label>
+
+		<input name="submit" type="button" onClick="validateInput('booking.php','targetDiv', cname.value, phone.value, unumber.value,
+		snumber.value, stname.value, sbname.value, dsbname.value, date.value, time.value)" value="Submit Booking">
+	</form>
+
+	<div id="targetDiv">
+		<!--updated information goes here-->
+	</div>
+
+</body>
+
+</html>

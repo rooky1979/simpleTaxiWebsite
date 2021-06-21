@@ -1,0 +1,19 @@
+Matthew Rook ID: 18007407
+
+Text file to show the SQL Query to create the table in myPHPAdmin
+
+
+CREATE TABLE taxiBookings (
+    reference_id int NOT NULL AUTO_INCREMENT,
+    cust_name varchar(255) NOT NULL,
+    phone varchar(255) NOT NULL,
+    unit_no varchar(10),
+    street_no varchar(10) NOT NULL,
+    street_name varchar(255) NOT NULL,
+    suburb varchar(255),
+    dest_suburb varchar(255),
+    pick_up_date varchar(20) NOT NULL,
+    pick_up_time varchar(20) NOT NULL,
+    Status varchar(15),
+    PRIMARY KEY (reference_id)
+);

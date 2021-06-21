@@ -1,0 +1,25 @@
+<!--Matthew Rook ID: 18007407
+	admin.html for client side GUI and for viewing and setting the status of the taxi requests-->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Assignment 2 Taxi Booking System - Admin Component</title>
+	<script type="text/javascript" src="admin.js"> </script>
+	<script type="text/javascript" src="xhr.js"></script>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<h1>CabsOnline - Taxi Search</h1>
+
+	<form>
+		<label>Enter a reference number <strong>(Optional):</strong><input type="text" name="bsearch"></label>
+		<input name="sbutton" type="button" onClick="searchData('admin.php', 'targetDiv', bsearch.value)" value="Search Bookings">
+		<br>
+		<br>
+	</form>
+	
+	<div class = "content" id="targetDiv"> 
+	      <!--updated information goes here-->
+	</div> 
+</body>
+</html>
